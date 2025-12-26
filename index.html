@@ -3,43 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل مرجعي للمدرب المحترف - الإصدار الشامل</title>
+    <title>الدليل المرجعي الموسوعي للمدرب المحترف</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Cairo', sans-serif;
             background-color: #f8fafc;
             scroll-behavior: smooth;
+            line-height: 1.8;
         }
         .section-header {
             position: relative;
             display: inline-block;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
         }
         .section-header::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: 0;
             right: 0;
-            width: 60px;
-            height: 4px;
-            border-radius: 2px;
+            width: 80px;
+            height: 6px;
+            border-radius: 4px;
         }
         .domain-card {
             transition: all 0.3s ease;
+            height: 100%;
         }
         .domain-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .info-pill {
-            background-color: #f1f5f9;
-            padding: 4px 12px;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            color: #475569;
-            font-weight: 600;
         }
         .mermaid-container {
             background: linear-gradient(to bottom right, #ffffff, #f0f9ff);
@@ -48,152 +43,223 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
         .page-break {
-            margin-top: 5rem;
-            margin-bottom: 5rem;
-            border-top: 2px dashed #e2e8f0;
+            margin-top: 6rem;
+            margin-bottom: 6rem;
+            border-top: 2px dashed #cbd5e1;
             position: relative;
         }
         .page-break::after {
-            content: '⚓';
+            content: 'فصل';
             position: absolute;
-            top: -14px;
+            top: -16px;
             left: 50%;
             transform: translateX(-50%);
             background: #f8fafc;
-            padding: 0 10px;
-            color: #94a3b8;
+            padding: 0 15px;
+            color: #64748b;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .cone-layer {
+            transition: transform 0.2s;
+            cursor: default;
+        }
+        .cone-layer:hover {
+            transform: scale(1.02);
+            font-weight: bold;
         }
         /* Tables */
         .custom-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
         .custom-table th {
-            background-color: #f8fafc;
-            color: #334155;
-            font-weight: 700;
-            padding: 12px;
+            background-color: #f1f5f9;
+            color: #1e293b;
+            font-weight: 800;
+            padding: 16px;
             text-align: right;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 3px solid #e2e8f0;
         }
         .custom-table td {
-            padding: 12px;
+            padding: 16px;
             border-bottom: 1px solid #e2e8f0;
             color: #475569;
+            vertical-align: top;
+        }
+        .custom-table tr:last-child td {
+            border-bottom: none;
+        }
+        .chapter-badge {
+            display: inline-block;
+            background: #1e293b;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
 <body class="text-slate-800">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 py-3">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200 py-4">
         <div class="max-w-7xl mx-auto px-4 flex justify-between items-center overflow-x-auto">
-            <span class="font-bold text-slate-700 whitespace-nowrap ml-4 text-lg">الدليل المرجعي (نسخة الرخص المهنية)</span>
-            <div class="flex gap-2 text-xs md:text-sm font-semibold whitespace-nowrap overflow-x-auto pb-1 md:pb-0">
-                <a href="#domain1" class="text-blue-600 bg-blue-50 px-3 py-1.5 rounded-lg hover:bg-blue-100 transition">1. المعرفة</a>
-                <a href="#domain2" class="text-emerald-600 bg-emerald-50 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition">2. الممارسة</a>
-                <a href="#domain3" class="text-amber-600 bg-amber-50 px-3 py-1.5 rounded-lg hover:bg-amber-100 transition">3. القيم</a>
-                <a href="#domain4" class="text-rose-600 bg-rose-50 px-3 py-1.5 rounded-lg hover:bg-rose-100 transition">4. المستقبل</a>
+            <span class="font-bold text-slate-800 whitespace-nowrap ml-6 text-xl tracking-tight">الدليل الموسوعي</span>
+            <div class="flex gap-3 text-sm font-bold whitespace-nowrap overflow-x-auto pb-1 md:pb-0">
+                <a href="#domain1" class="text-blue-700 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">1. المعرفة والنظريات</a>
+                <a href="#domain2" class="text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg hover:bg-emerald-100 transition">2. الممارسة والأساليب</a>
+                <a href="#domain3" class="text-amber-700 bg-amber-50 px-4 py-2 rounded-lg hover:bg-amber-100 transition">3. القيم والأخلاقيات</a>
+                <a href="#domain4" class="text-rose-700 bg-rose-50 px-4 py-2 rounded-lg hover:bg-rose-100 transition">4. أدوات المستقبل</a>
             </div>
         </div>
     </nav>
 
-    <div class="max-w-7xl mx-auto px-4 md:px-8 py-10">
+    <div class="max-w-7xl mx-auto px-4 md:px-8 py-12">
         
         <!-- Header -->
-        <header class="text-center mb-16 relative">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-4 tracking-tight">دليل المدرب المحترف</h1>
-            <p class="text-xl text-slate-600 mb-8 font-medium max-w-2xl mx-auto">مرجع شامل لاجتياز اختبارات الرخص المهنية وتطوير الكفايات التدريبية</p>
+        <header class="text-center mb-20 relative">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">الإصدار الشامل (Comprehensive Edition)</div>
+            <h1 class="text-4xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight leading-tight">دليل المدرب المحترف</h1>
+            <p class="text-xl md:text-2xl text-slate-600 mb-10 font-medium max-w-4xl mx-auto leading-relaxed">المرجع الكامل للنظريات، النماذج، الأدوات، واستراتيجيات التدريب الحديثة وفق المعايير الدولية.</p>
             
             <!-- Identity Card -->
-            <div class="inline-flex flex-col md:flex-row items-center gap-4 bg-white px-8 py-4 rounded-2xl shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+            <div class="inline-flex flex-col md:flex-row items-center gap-6 bg-white px-10 py-6 rounded-3xl shadow-xl border border-slate-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                 <div class="text-center md:text-right">
-                    <span class="font-bold text-xl text-slate-800 block">محمد علي عسيري</span>
-                    <span class="text-sm text-slate-500 font-medium">مدرب وكوتش تطوير الأداء</span>
+                    <span class="font-bold text-2xl text-slate-800 block mb-1">محمد علي عسيري</span>
+                    <span class="text-base text-slate-500 font-medium bg-slate-100 px-3 py-1 rounded-full">مدرب وكوتش تطوير الأداء</span>
                 </div>
-                <div class="hidden md:block w-px h-10 bg-slate-200 mx-2"></div>
-                <a href="https://x.com/mohdasiri99" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 bg-slate-900 hover:bg-black text-white px-5 py-2.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
-                    <span class="font-bold font-mono text-sm dir-ltr">@mohdasiri99</span>
+                <div class="hidden md:block w-px h-12 bg-slate-200 mx-4"></div>
+                <a href="https://x.com/mohdasiri99" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-4 bg-slate-900 hover:bg-black text-white px-6 py-3 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl">
+                    <svg class="w-6 h-6 transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                    <div class="flex flex-col items-start leading-none">
+                        <span class="text-[10px] text-gray-400 mb-1">تواصل معي</span>
+                        <span class="font-bold font-mono text-base dir-ltr">@mohdasiri99</span>
+                    </div>
                 </a>
             </div>
         </header>
 
         <!-- ================= DOMAIN 1: PROFESSIONAL KNOWLEDGE ================= -->
-        <section id="domain1" class="scroll-mt-24">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center text-2xl font-bold shadow-sm">1</div>
+        <section id="domain1" class="scroll-mt-32">
+            <div class="flex items-center gap-6 mb-10">
+                <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-blue-200">1</div>
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-800">المجال الأول: المعرفة المهنية</h2>
-                    <p class="text-sm text-slate-500">الوزن النسبي في الاختبارات: 30% تقريباً</p>
+                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-blue-600">المعرفة المهنية والنظريات</h2>
+                    <p class="text-lg text-slate-500">الأسس العلمية التي يبني عليها المدرب ممارساته.</p>
                 </div>
             </div>
 
-            <!-- Deep Dive: Theories & Concepts -->
+            <!-- 1.1 Learning Theories Comparison -->
+            <div class="mb-16">
+                <span class="chapter-badge">الفصل الأول</span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">مدارس ونظريات التعلم (Learning Theories)</h3>
+                <p class="text-slate-600 mb-6 max-w-4xl">فهم كيفية حدوث التعلم هو الخطوة الأولى للمدرب. إليك مقارنة جوهرية بين المدارس الثلاث الكبرى وتطبيقاتها في التدريب:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Behaviorism -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-blue-500 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-blue-800 mb-3">1. المدرسة السلوكية (Behaviorism)</h4>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: بافلوف، سكينر، ثورندايك</p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li><strong>الفكرة:</strong> التعلم هو تغير في السلوك الظاهر نتيجة مثير واستجابة وتعزيز.</li>
+                            <li><strong>دور المدرب:</strong> مصمم للبيئة، ملقن، ومقوم للسلوك.</li>
+                            <li class="bg-blue-50 p-3 rounded-lg border border-blue-100">
+                                <strong>تطبيق تدريبي:</strong> التكرار والممارسة، التغذية الراجعة الفورية، المكافآت والشهادات عند الإنجاز.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Cognitivism -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-indigo-500 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-indigo-800 mb-3">2. المدرسة المعرفية (Cognitivism)</h4>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: بياجيه، جانييه</p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li><strong>الفكرة:</strong> التركيز على العمليات العقلية الداخلية (كيف يعالج الدماغ المعلومة ويخزنها).</li>
+                            <li><strong>دور المدرب:</strong> منظم للمحتوى، مسهل لعملية الفهم.</li>
+                            <li class="bg-indigo-50 p-3 rounded-lg border border-indigo-100">
+                                <strong>تطبيق تدريبي:</strong> الخرائط الذهنية، التسلسل المنطقي للمحتوى، ربط المعلومات الجديدة بالسابقة.
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Constructivism -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-cyan-500 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-cyan-800 mb-3">3. المدرسة البنائية (Constructivism)</h4>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: فيغوتسكي، ديوي</p>
+                        <ul class="space-y-3 text-sm text-slate-700">
+                            <li><strong>الفكرة:</strong> المتعلم يبني معرفته بنفسه من خلال الخبرة والتفاعل الاجتماعي.</li>
+                            <li><strong>دور المدرب:</strong> مرشد، ميسر (Facilitator)، وموجه.</li>
+                            <li class="bg-cyan-50 p-3 rounded-lg border border-cyan-100">
+                                <strong>تطبيق تدريبي:</strong> التعلم القائم على المشاريع، النقاشات الجماعية، حل المشكلات المعقدة.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1.2 Edgar Dale's Cone -->
+            <div class="mb-16">
+                <span class="chapter-badge">الفصل الثاني</span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">مخروط الخبرة لإدجار ديل (Cone of Experience)</h3>
+                <p class="text-slate-600 mb-6">نموذج يوضح العلاقة بين نوع النشاط التعليمي ومقدار ما يتذكره المتعلم (نسب الاستبقاء).</p>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <!-- The Cone Visual -->
+                    <div class="w-full md:w-1/2 flex flex-col items-center">
+                        <div class="w-full max-w-md space-y-1 text-center text-white text-xs md:text-sm font-bold">
+                            <!-- Passive Learning -->
+                            <div class="cone-layer bg-slate-300 py-2 w-[20%] mx-auto rounded-t-lg text-slate-700">القراءة (10%)</div>
+                            <div class="cone-layer bg-slate-400 py-2 w-[35%] mx-auto text-slate-800">السماع (20%)</div>
+                            <div class="cone-layer bg-slate-500 py-2 w-[50%] mx-auto">مشاهدة الصور (30%)</div>
+                            <div class="cone-layer bg-slate-600 py-2 w-[65%] mx-auto">مشاهدة فيديو/عرض (50%)</div>
+                            <!-- Active Learning -->
+                            <div class="cone-layer bg-blue-500 py-3 w-[80%] mx-auto shadow-lg relative z-10 scale-105">المشاركة في نقاش (70%)</div>
+                            <div class="cone-layer bg-blue-700 py-4 w-[95%] mx-auto shadow-lg relative z-10 scale-105">ممارسة العمل / المحاكاة (90%)</div>
+                        </div>
+                        <p class="text-center text-sm text-gray-500 mt-4 font-semibold">كلما اتجهنا لقاعدة الهرم، زاد التفاعل وثبات المعلومة</p>
+                    </div>
+
+                    <!-- Explanation -->
+                    <div class="w-full md:w-1/2 bg-blue-50 p-8 rounded-2xl border border-blue-100">
+                        <h4 class="font-bold text-blue-900 mb-4 text-lg">دلالات للمدرب المحترف:</h4>
+                        <ul class="list-disc list-inside space-y-3 text-slate-700">
+                            <li>الاعتماد على <strong>المحاضرة فقط</strong> يؤدي لنسيان 90% من المحتوى.</li>
+                            <li>يجب دمج الوسائل البصرية والسمعية لرفع النسبة إلى 50%.</li>
+                            <li>للوصول إلى <strong>الإتقان</strong>، يجب إشراك المتدرب في (النقاش، التصميم، التقديم، الممارسة).</li>
+                            <li><strong>القاعدة الذهبية:</strong> "ما أسمعه أنساه، ما أراه أتذكره، ما أفعله أفهمه".</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1.3 ADDIE & TNA (Condensed from previous version) -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <!-- Training vs Education -->
-                <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm domain-card">
-                    <h3 class="text-xl font-bold text-blue-800 mb-4 border-b pb-2">💡 مفاهيم أساسية (موضع سؤال)</h3>
-                    <table class="custom-table">
-                        <thead><tr><th>المعيار</th><th>التعليم (Education)</th><th>التحصيل/التدريب (Training)</th></tr></thead>
-                        <tbody>
-                            <tr><td><strong>الهدف</strong></td><td>نقل المعرفة العامة وتنمية العقل</td><td>إكساب مهارة محددة وتغيير سلوك</td></tr>
-                            <tr><td><strong>المدى الزمني</strong></td><td>طويل الأجل (سنوات)</td><td>قصير الأجل (أيام/أسابيع)</td></tr>
-                            <tr><td><strong>المحتوى</strong></td><td>نظري ومعرفي واسع</td><td>عملي وتطبيقي ومركز</td></tr>
-                        </tbody>
-                    </table>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">نموذج ADDIE للتصميم</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="info-pill bg-blue-100 text-blue-700">A: التحليل</span>
+                        <span class="info-pill bg-indigo-100 text-indigo-700">D: التصميم</span>
+                        <span class="info-pill bg-purple-100 text-purple-700">D: التطوير</span>
+                        <span class="info-pill bg-pink-100 text-pink-700">I: التنفيذ</span>
+                        <span class="info-pill bg-rose-100 text-rose-700">E: التقييم</span>
+                    </div>
+                    <p class="mt-4 text-sm text-gray-600">الإطار العام لأي عملية تدريبية ناجحة، يبدأ بتحليل الاحتياجات وينتهي بقياس الأثر.</p>
                 </div>
-
-                <!-- Needs Analysis (TNA) -->
-                <div class="bg-white p-6 rounded-2xl border border-blue-100 shadow-sm domain-card">
-                    <h3 class="text-xl font-bold text-blue-800 mb-4 border-b pb-2">📊 تحليل الاحتياجات التدريبية (TNA)</h3>
-                    <p class="text-sm text-gray-600 mb-3">الخطوة الأولى والأهم في العملية التدريبية. المستويات الثلاثة:</p>
-                    <div class="space-y-3">
-                        <div class="flex items-start gap-3">
-                            <div class="bg-blue-50 text-blue-700 font-bold px-2 py-1 rounded text-xs w-20 text-center mt-1">المؤسسي</div>
-                            <p class="text-sm text-slate-700">تحليل أهداف المنظمة، المشاكل العامة، وثقافة العمل.</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="bg-blue-50 text-blue-700 font-bold px-2 py-1 rounded text-xs w-20 text-center mt-1">الوظيفي</div>
-                            <p class="text-sm text-slate-700">تحليل الجدارات والمهام المطلوبة لشغل الوظيفة (Job Description).</p>
-                        </div>
-                        <div class="flex items-start gap-3">
-                            <div class="bg-blue-50 text-blue-700 font-bold px-2 py-1 rounded text-xs w-20 text-center mt-1">الفردي</div>
-                            <p class="text-sm text-slate-700">تحليل فجوة الأداء للموظف (الأداء الحالي vs المأمول).</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bloom's Taxonomy -->
-            <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100 mb-8">
-                <h3 class="text-xl font-bold text-blue-900 mb-4">🧠 تصنيف بلوم للأهداف المعرفية (Bloom's Taxonomy)</h3>
-                <div class="grid grid-cols-2 md:grid-cols-6 gap-2 text-center text-xs md:text-sm">
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">1. التذكر</span>
-                        <span class="text-gray-500">حفظ، استرجاع</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">2. الفهم</span>
-                        <span class="text-gray-500">تفسير، تلخيص</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">3. التطبيق</span>
-                        <span class="text-gray-500">استخدام، تنفيذ</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">4. التحليل</span>
-                        <span class="text-gray-500">مقارنة، تفكيك</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">5. التقويم</span>
-                        <span class="text-gray-500">نقد، حكم</span>
-                    </div>
-                    <div class="bg-white p-3 rounded-lg border border-blue-200 shadow-sm">
-                        <span class="block font-bold text-blue-600 mb-1">6. الابتكار</span>
-                        <span class="text-gray-500">تصميم، بناء</span>
+                
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="text-xl font-bold text-slate-800 mb-4">أنماط المتدربين (VARK)</h3>
+                    <p class="text-sm text-gray-600 mb-4">يجب تنويع الأساليب لتناسب الجميع:</p>
+                    <div class="grid grid-cols-2 gap-2 text-sm font-semibold text-center">
+                        <div class="bg-gray-50 p-2 rounded text-gray-700">👁️ بصري</div>
+                        <div class="bg-gray-50 p-2 rounded text-gray-700">👂 سمعي</div>
+                        <div class="bg-gray-50 p-2 rounded text-gray-700">📖 قرائي</div>
+                        <div class="bg-gray-50 p-2 rounded text-gray-700">✋ حركي</div>
                     </div>
                 </div>
             </div>
@@ -202,174 +268,288 @@
         <div class="page-break"></div>
 
         <!-- ================= DOMAIN 2: PROFESSIONAL PRACTICE ================= -->
-        <section id="domain2" class="scroll-mt-24">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-2xl font-bold shadow-sm">2</div>
+        <section id="domain2" class="scroll-mt-32">
+            <div class="flex items-center gap-6 mb-10">
+                <div class="w-16 h-16 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-emerald-200">2</div>
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-800">المجال الثاني: الممارسة المهنية</h2>
-                    <p class="text-sm text-slate-500">الوزن النسبي في الاختبارات: 40% تقريباً</p>
+                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-emerald-600">الممارسة المهنية والأساليب</h2>
+                    <p class="text-lg text-slate-500">كيف نحول النظريات إلى واقع ملموس داخل القاعة.</p>
                 </div>
             </div>
 
-            <!-- Mind Map -->
-            <div class="mb-10">
-                <h3 class="text-xl font-bold text-slate-800 mb-4 text-emerald-700">📌 خريطة أساليب التدريب</h3>
-                <div class="mermaid-container p-6 overflow-x-auto">
-                    <div class="mermaid flex justify-center min-w-[900px]">
-                        mindmap
-                          root((أساليب التدريب))
-                            (العرض والإلقاء)
-                              ::icon(fa fa-microphone)
-                              المحاضرة
-                              القصة Storytelling
-                            (التفاعل والمشاركة)
-                              ::icon(fa fa-users)
-                              العصف الذهني
-                              دراسة الحالة
-                              لعب الأدوار
-                            (التطبيق العملي)
-                              ::icon(fa fa-cogs)
-                              المحاكاة Simulation
-                              البيان العملي Demo
-                              ورش العمل
-                            (خارج القاعة)
-                              ::icon(fa fa-briefcase)
-                              التوجيه Coaching
-                              الملازمة Shadowing
+            <!-- 2.1 Kolb's Learning Cycle - EXPANDED -->
+            <div class="mb-16">
+                <span class="chapter-badge">الفصل الثالث</span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">دورة كولب للتعلم التجريبي (Kolb's Experiential Learning)</h3>
+                <p class="text-slate-600 mb-8 max-w-4xl">يعتبر نموذج كولب من أهم النماذج لتصميم الأنشطة التدريبية. يرى كولب أن التعلم عملية دائرية من 4 مراحل، وينتج عنها 4 أنماط للمتعلمين.</p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                    <!-- The 4 Stages -->
+                    <div class="bg-emerald-50 p-8 rounded-3xl relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-full h-2 bg-emerald-500"></div>
+                        <h4 class="font-bold text-emerald-900 text-xl mb-6 text-center">🔄 مراحل دورة التعلم الأربعة</h4>
+                        
+                        <div class="relative space-y-6">
+                            <!-- Stage 1 -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">1</div>
+                                <div>
+                                    <h5 class="font-bold text-emerald-900">الخبرة المادية (Concrete Experience)</h5>
+                                    <p class="text-sm text-emerald-800/80">"الشعور". انخراط المتدرب في تجربة أو نشاط عملي محدد.</p>
+                                </div>
+                            </div>
+                            <!-- Stage 2 -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">2</div>
+                                <div>
+                                    <h5 class="font-bold text-emerald-900">الملاحظة التأملية (Reflective Observation)</h5>
+                                    <p class="text-sm text-emerald-800/80">"المشاهدة". التفكير فيما حدث، ومراجعة التجربة من عدة زوايا.</p>
+                                </div>
+                            </div>
+                            <!-- Stage 3 -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">3</div>
+                                <div>
+                                    <h5 class="font-bold text-emerald-900">المفاهيم المجردة (Abstract Conceptualization)</h5>
+                                    <p class="text-sm text-emerald-800/80">"التفكير". الخروج باستنتاجات، قواعد، أو نظريات من التجربة.</p>
+                                </div>
+                            </div>
+                            <!-- Stage 4 -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">4</div>
+                                <div>
+                                    <h5 class="font-bold text-emerald-900">التجريب النشط (Active Experimentation)</h5>
+                                    <p class="text-sm text-emerald-800/80">"العمل". تطبيق ما تعلمه في مواقف جديدة للتأكد من صحته.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The 4 Styles -->
+                    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                        <h4 class="font-bold text-slate-800 text-xl mb-6 text-center">🧠 أنماط المتعلمين وفق كولب</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="p-4 bg-yellow-50 rounded-xl border border-yellow-100">
+                                <span class="block text-yellow-800 font-bold mb-1">التباعدي (Diverger)</span>
+                                <span class="text-xs text-gray-600">خيالي، يفضل العصف الذهني (شعور + مشاهدة).</span>
+                            </div>
+                            <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                                <span class="block text-blue-800 font-bold mb-1">الاستيعابي (Assimilator)</span>
+                                <span class="text-xs text-gray-600">منطقي، يفضل النظريات (تفكير + مشاهدة).</span>
+                            </div>
+                            <div class="p-4 bg-green-50 rounded-xl border border-green-100">
+                                <span class="block text-green-800 font-bold mb-1">التقاربي (Converger)</span>
+                                <span class="text-xs text-gray-600">عملي، يفضل حل المشكلات (تفكير + عمل).</span>
+                            </div>
+                            <div class="p-4 bg-red-50 rounded-xl border border-red-100">
+                                <span class="block text-red-800 font-bold mb-1">التكيفي (Accommodator)</span>
+                                <span class="text-xs text-gray-600">مغامر، يفضل التجربة والخطأ (شعور + عمل).</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Managing Trainees (Crucial for Exams) -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                <div class="bg-white p-6 rounded-2xl border-l-4 border-emerald-500 shadow-sm domain-card">
-                    <h3 class="text-xl font-bold text-emerald-800 mb-4">🎭 إدارة أنماط المتدربين الصعبة</h3>
-                    <ul class="space-y-4 text-sm">
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">المتدرب الثرثار (Talkative):</strong>
-                            <span class="text-gray-600">قاطعه بلباقة عند التقاط أنفاسه، ذكره بضيق الوقت، اطلب سماع آراء الآخرين.</span>
-                        </li>
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">المتدرب الصامت (Silent):</strong>
-                            <span class="text-gray-600">وجه له أسئلة سهلة ومفتوحة، شجعه بصرياً، ضعه في مجموعات صغيرة أولاً.</span>
-                        </li>
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">المتدرب المجادل (Arguer):</strong>
-                            <span class="text-gray-600">حافظ على هدوئك، استخدم الحقائق، اطلب رأي المجموعة، لا تدخل في جدال شخصي.</span>
-                        </li>
-                    </ul>
+            <!-- 2.2 Training Types Table -->
+            <div class="mb-16">
+                <span class="chapter-badge">الفصل الرابع</span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">أنواع التدريب وتصنيفاته (Types of Training)</h3>
+                <div class="overflow-x-auto">
+                    <table class="custom-table min-w-[800px]">
+                        <thead>
+                            <tr>
+                                <th>معيار التصنيف</th>
+                                <th>النوع الأول</th>
+                                <th>النوع الثاني</th>
+                                <th>ملاحظات للمدرب</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>حسب المكان</strong></td>
+                                <td>
+                                    <div class="font-bold text-emerald-700">داخل العمل (On-the-Job)</div>
+                                    <span class="text-xs">في بيئة العمل الحقيقية، تكلفة أقل، واقعية عالية.</span>
+                                </td>
+                                <td>
+                                    <div class="font-bold text-emerald-700">خارج العمل (Off-the-Job)</div>
+                                    <span class="text-xs">في قاعات، فنادق، تركيز أعلى، تكلفة أعلى.</span>
+                                </td>
+                                <td>يفضل OJT للمهارات التقنية، و Off-the-Job للمفاهيم والسلوكيات.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>حسب التوقيت</strong></td>
+                                <td>
+                                    <div class="font-bold text-blue-700">متزامن (Synchronous)</div>
+                                    <span class="text-xs">بث مباشر، تفاعل فوري، قاعة افتراضية أو واقعية.</span>
+                                </td>
+                                <td>
+                                    <div class="font-bold text-blue-700">غير متزامن (Asynchronous)</div>
+                                    <span class="text-xs">مسجل، ذاتي، منصات مثل Udemy.</span>
+                                </td>
+                                <td>المزيج (Blended) هو الأفضل حالياً.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>حسب الهدف</strong></td>
+                                <td>
+                                    <div class="font-bold text-purple-700">تدريب توجيهي (Induction)</div>
+                                    <span class="text-xs">للموظفين الجدد، للتعريف بالثقافة والأنظمة.</span>
+                                </td>
+                                <td>
+                                    <div class="font-bold text-purple-700">تدريب علاجي/تطويري</div>
+                                    <span class="text-xs">لسد فجوة أداء حالية أو الاستعداد لترقية.</span>
+                                </td>
+                                <td>يجب تحديد الهدف بدقة في TNA.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="bg-white p-6 rounded-2xl border-l-4 border-emerald-500 shadow-sm domain-card">
-                    <h3 class="text-xl font-bold text-emerald-800 mb-4">🗣️ مهارات الاتصال ولغة الجسد</h3>
-                    <ul class="space-y-4 text-sm">
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">قاعدة 7-38-55 (مهرابيان):</strong>
-                            <span class="text-gray-600">تأثير الرسالة يعتمد 7% على الكلمات، 38% على نبرة الصوت، و55% على لغة الجسد.</span>
-                        </li>
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">التواصل البصري (Eye Contact):</strong>
-                            <span class="text-gray-600">وزع نظرك على الجميع (حرف M أو W)، لا تركز على جهة واحدة، تجنب النظر للأرض أو السقف.</span>
-                        </li>
-                        <li class="bg-slate-50 p-3 rounded-lg">
-                            <strong class="text-emerald-700 block mb-1">كسر الجليد (Ice Breakers):</strong>
-                            <span class="text-gray-600">أنشطة قصيرة بداية الدورة لإذابة الحواجز النفسية وبناء الألفة.</span>
-                        </li>
-                    </ul>
+            <!-- 2.3 Trainer's Design Toolkit -->
+            <div class="mb-16">
+                <span class="chapter-badge">الفصل الخامس</span>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">حقيبة أدوات المدرب للتصميم (Trainer's Design Toolkit)</h3>
+                <p class="text-slate-600 mb-6">لا يكتمل المدرب المحترف بدون أدوات تقنية تساعده في إعداد المحتوى وإدارة القاعة.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Presentation -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-orange-400 transition cursor-default">
+                        <div class="text-orange-500 text-3xl mb-3">🖥️</div>
+                        <h5 class="font-bold text-slate-800 mb-2">العرض والتقديم</h5>
+                        <ul class="text-sm text-slate-500 space-y-1">
+                            <li>• PowerPoint</li>
+                            <li>• Canva (تصميم بصري)</li>
+                            <li>• Prezi (تكبير وتصغير)</li>
+                            <li>• Gamma (عرض بالذكاء الاصطناعي)</li>
+                        </ul>
+                    </div>
+                    <!-- Interaction -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 transition cursor-default">
+                        <div class="text-blue-500 text-3xl mb-3">🎮</div>
+                        <h5 class="font-bold text-slate-800 mb-2">التفاعل واللعب</h5>
+                        <ul class="text-sm text-slate-500 space-y-1">
+                            <li>• Kahoot! (مسابقات)</li>
+                            <li>• Mentimeter (تصويت حي)</li>
+                            <li>• Padlet (حائط أفكار)</li>
+                            <li>• Wheel of Names (قرعة)</li>
+                        </ul>
+                    </div>
+                    <!-- Management -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-green-400 transition cursor-default">
+                        <div class="text-green-500 text-3xl mb-3">📋</div>
+                        <h5 class="font-bold text-slate-800 mb-2">الإدارة والتخطيط</h5>
+                        <ul class="text-sm text-slate-500 space-y-1">
+                            <li>• Trello (تنظيم المهام)</li>
+                            <li>• Google Forms (استبيانات)</li>
+                            <li>• Zoom/Teams (قاعات)</li>
+                            <li>• Notion (بنك المعرفة)</li>
+                        </ul>
+                    </div>
+                    <!-- AI Helpers -->
+                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-400 transition cursor-default">
+                        <div class="text-purple-500 text-3xl mb-3">🤖</div>
+                        <h5 class="font-bold text-slate-800 mb-2">مساعدو الـ AI</h5>
+                        <ul class="text-sm text-slate-500 space-y-1">
+                            <li>• ChatGPT (سيناريوهات)</li>
+                            <li>• Gemini (بحث وتحليل)</li>
+                            <li>• Synthesia (أفاتار فيديو)</li>
+                            <li>• ElevenLabs (صوتيات)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
 
         <div class="page-break"></div>
 
-        <!-- ================= DOMAIN 3: PROFESSIONAL VALUES ================= -->
-        <section id="domain3" class="scroll-mt-24">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center text-2xl font-bold shadow-sm">3</div>
+        <!-- ================= DOMAIN 3: VALUES & ETHICS (Preserved & Refined) ================= -->
+        <section id="domain3" class="scroll-mt-32">
+            <div class="flex items-center gap-6 mb-10">
+                <div class="w-16 h-16 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-amber-200">3</div>
                 <div>
-                    <h2 class="text-3xl font-bold text-slate-800">المجال الثالث: القيم والمسؤوليات</h2>
-                    <p class="text-sm text-slate-500">الوزن النسبي في الاختبارات: 15% تقريباً</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Legal & IP -->
-                <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm md:col-span-2">
-                    <h3 class="text-lg font-bold text-amber-800 mb-3">⚖️ الحقوق القانونية والملكية الفكرية</h3>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-700">
-                        <div class="bg-amber-50 p-3 rounded-lg">
-                            <strong class="block text-amber-900 mb-1">الاقتباس المشروع:</strong>
-                            يسمح باقتباس نصوص قصيرة للأغراض التعليمية بشرط ذكر المصدر واسم المؤلف بوضوح.
-                        </div>
-                        <div class="bg-amber-50 p-3 rounded-lg">
-                            <strong class="block text-amber-900 mb-1">استخدام الصور والفيديوهات:</strong>
-                            يجب استخدام وسائط "مشاع إبداعي" (Creative Commons) أو مرخصة، ويمنع استخدام مواد عليها حقوق محفوظة دون إذن.
-                        </div>
-                        <div class="bg-amber-50 p-3 rounded-lg">
-                            <strong class="block text-amber-900 mb-1">سرية المعلومات:</strong>
-                            يمنع نشر أسرار المؤسسة التي تتدرب لديها، أو مناقشة مشاكلها الداخلية خارج القاعة.
-                        </div>
-                        <div class="bg-amber-50 p-3 rounded-lg">
-                            <strong class="block text-amber-900 mb-1">الميثاق الأخلاقي:</strong>
-                            العدالة في توزيع الفرص، عدم التنمر، احترام التنوع الثقافي والديني، والابتعاد عن الآراء السياسية.
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Self Development -->
-                <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm">
-                    <h3 class="text-lg font-bold text-amber-800 mb-3">📈 التطوير المهني المستمر</h3>
-                    <ul class="text-sm space-y-3 text-slate-700">
-                        <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> عضوية الجمعيات المهنية.</li>
-                        <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> حضور المؤتمرات (ATD, SHRM).</li>
-                        <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> القراءة في علم النفس التربوي.</li>
-                        <li class="flex items-center gap-2"><span class="text-amber-500">✔</span> الحصول على التغذية الراجعة من الزملاء (Peer Review).</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <div class="page-break"></div>
-
-        <!-- ================= DOMAIN 4: FUTURE SKILLS ================= -->
-        <section id="domain4" class="scroll-mt-24">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl font-bold shadow-sm">4</div>
-                <div>
-                    <h2 class="text-3xl font-bold text-slate-800">المجال الرابع: مهارات المستقبل</h2>
-                    <p class="text-sm text-slate-500">الوزن النسبي في الاختبارات: 15% تقريباً</p>
+                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-amber-500">القيم والمسؤوليات المهنية</h2>
+                    <p class="text-lg text-slate-500">البوصلة الأخلاقية التي توجه المدرب.</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Data & Analytics -->
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-rose-500 shadow-md">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">📊 البيانات الضخمة والتدريب</h3>
-                    <p class="text-sm text-gray-600 mb-4">لم يعد المدرب مجرد ملقي، بل محلل بيانات:</p>
-                    <ul class="space-y-2 text-sm text-slate-700">
-                        <li><strong>تحليل التعلم (Learning Analytics):</strong> تتبع سلوك المتدربين على المنصات.</li>
-                        <li><strong>التخصيص (Personalization):</strong> استخدام البيانات لتصميم مسارات تدريبية تناسب كل فرد.</li>
-                        <li><strong>التنبؤ (Prediction):</strong> معرفة من قد يفشل في الدورة قبل حدوث ذلك وتقديم الدعم.</li>
+                <div class="bg-amber-50 p-8 rounded-3xl border border-amber-100">
+                    <h3 class="text-2xl font-bold text-amber-900 mb-4">⚖️ ميثاق الشرف التدريبي</h3>
+                    <div class="space-y-4 text-amber-900/80">
+                        <p><strong>1. النزاهة العلمية:</strong> عدم ادعاء المعرفة بما لا تتقن، ونسب المعلومات لأصحابها.</p>
+                        <p><strong>2. السرية:</strong> ما يدور في القاعة من قصص شخصية أو أسرار عمل يظل في القاعة (Vegas Rule).</p>
+                        <p><strong>3. الحيادية:</strong> عدم التحيز لجنس، عرق، أو دين، وعدم استغلال المنصة للترويج لأفكار سياسية أو طائفية.</p>
+                        <p><strong>4. الالتزام بالوقت:</strong> احترام وقت المتدربين (البدء والانتهاء في الموعد) هو أول علامات الاحترافية.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">©️ الملكية الفكرية (Intellectual Property)</h3>
+                    <p class="text-slate-600 mb-4">كيف يحمي المدرب نفسه ويحترم الآخرين؟</p>
+                    <ul class="list-disc list-inside space-y-2 text-slate-700">
+                        <li>استخدام الصور من مواقع مجانية (Unsplash, Pexels) أو مدفوعة.</li>
+                        <li>عدم نسخ حقائب تدريبية كاملة وتغيير الاسم فقط.</li>
+                        <li>الاقتباس العادل (Fair Use) مسموح به للأغراض التعليمية بحدود معقولة مع ذكر المصدر.</li>
+                        <li>تسجيل الحقائب التدريبية الخاصة بك لدى الجهات المختصة لحمايتها.</li>
                     </ul>
                 </div>
+            </div>
+        </section>
 
-                <!-- Agile L&D -->
-                <div class="bg-white p-6 rounded-2xl border-t-4 border-rose-500 shadow-md">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">🚀 التصميم المرن (Agile Learning)</h3>
-                    <p class="text-sm text-gray-600 mb-4">بدلاً من تصميم دورات ضخمة تستغرق شهوراً (نموذج الشلال)، نستخدم المرونة:</p>
-                    <ul class="space-y-2 text-sm text-slate-700">
-                        <li><strong>التكرار السريع (Iterative):</strong> إطلاق نسخة أولية وتحسينها.</li>
-                        <li><strong>التعلم المصغر (Micro-learning):</strong> محتوى قصير ومركز.</li>
-                        <li><strong>التشاركية:</strong> إشراك المتدرب في تصميم المحتوى.</li>
-                    </ul>
+        <div class="page-break"></div>
+
+        <!-- ================= DOMAIN 4: FUTURE SKILLS (Preserved & Refined) ================= -->
+        <section id="domain4" class="scroll-mt-32">
+            <div class="flex items-center gap-6 mb-10">
+                <div class="w-16 h-16 rounded-2xl bg-rose-500 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-rose-200">4</div>
+                <div>
+                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-rose-500">مهارات المستقبل</h2>
+                    <p class="text-lg text-slate-500">الاستعداد للجيل القادم من التدريب.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="lg:col-span-2 bg-white p-8 rounded-3xl border-t-8 border-rose-500 shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4">🚀 تحولات التدريب المستقبلية</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-bold text-rose-600 mb-2">من "مدرب ملقن" إلى "ميسر تعلم"</h4>
+                            <p class="text-sm text-slate-600">لم يعد المدرب مصدر المعلومة الوحيد، دوره الآن هو إدارة النقاش وتحفيز البحث.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-600 mb-2">من "دورة واحدة" إلى "التعلم المستمر"</h4>
+                            <p class="text-sm text-slate-600">التحول نحو التعلم المصغر (Micro-learning) والتعلم في سياق العمل (Workflow Learning).</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-600 mb-2">تحليل بيانات التعلم (L. Analytics)</h4>
+                            <p class="text-sm text-slate-600">استخدام البيانات لقياس التفاعل، الفهم، والتنبؤ باحتياجات المتدرب المستقبلية.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-rose-600 mb-2">الواقع المعزز والافتراضي (AR/VR)</h4>
+                            <p class="text-sm text-slate-600">محاكاة بيئات خطرة أو معقدة بتكلفة آمنة (مثل تدريب الطيارين والأطباء).</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-rose-50 p-8 rounded-3xl border border-rose-100 flex flex-col justify-center text-center">
+                    <div class="text-6xl mb-4">🔮</div>
+                    <h3 class="text-xl font-bold text-rose-900 mb-2">نصيحة للمستقبل</h3>
+                    <p class="text-rose-800/80 italic">"الأمي في القرن الحادي والعشرين ليس من لا يقرأ ويكتب، بل من لا يستطيع أن يتعلم، ويمحو ما تعلم، ويعيد التعلم من جديد."</p>
+                    <span class="text-rose-800 font-bold mt-2">- ألفين توفلر</span>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="mt-20 pt-10 border-t border-slate-200 text-center">
-            <p class="text-slate-500 font-medium mb-2">الدليل المرجعي للمدرب المحترف - إصدار الرخص المهنية</p>
-            <p class="text-slate-400 text-sm">محمد علي عسيري | جميع الحقوق محفوظة &copy; 2025</p>
+        <footer class="mt-24 pt-12 pb-8 border-t border-slate-200 text-center bg-white rounded-t-3xl">
+            <h2 class="text-2xl font-bold text-slate-800 mb-2">دليل المدرب المحترف</h2>
+            <p class="text-slate-500 font-medium mb-6">المرجع الشامل للتطوير والتميز في عالم التدريب</p>
+            <div class="flex justify-center gap-4 mb-8">
+                <span class="bg-slate-100 px-3 py-1 rounded text-xs text-slate-600">الإصدار 3.0</span>
+                <span class="bg-slate-100 px-3 py-1 rounded text-xs text-slate-600">متوافق مع المعايير المهنية</span>
+            </div>
+            <p class="text-slate-400 text-sm dir-ltr">Designed for © Mohammed Al-Asiri 2025</p>
         </footer>
 
     </div>
@@ -388,7 +568,7 @@
                 secondaryColor: '#f0f9ff',
                 tertiaryColor: '#ffffff'
             },
-            mindmap: { useMaxWidth: false, padding: 20 }
+            mindmap: { useMaxWidth: false, padding: 30 }
         });
     </script>
 </body>
