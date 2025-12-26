@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الدليل المرجعي الموسوعي للمدرب المحترف</title>
+    <title>الدليل المرجعي الموسوعي للمدرب المحترف - الإصدار الماسي</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -109,6 +109,12 @@
         .hat-card {
             border-right-width: 6px;
         }
+        .brain-part {
+            transition: all 0.3s;
+        }
+        .brain-part:hover {
+            transform: scale(1.03);
+        }
     </style>
 </head>
 <body class="text-slate-800">
@@ -119,7 +125,7 @@
             <span class="font-bold text-slate-800 whitespace-nowrap ml-6 text-xl tracking-tight">الدليل الموسوعي</span>
             <div class="flex gap-3 text-sm font-bold whitespace-nowrap overflow-x-auto pb-1 md:pb-0">
                 <a href="#domain1" class="text-blue-700 bg-blue-50 px-4 py-2 rounded-lg hover:bg-blue-100 transition">1. المعرفة والنظريات</a>
-                <a href="#domain2" class="text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg hover:bg-emerald-100 transition">2. الممارسة والأساليب</a>
+                <a href="#domain2" class="text-emerald-700 bg-emerald-50 px-4 py-2 rounded-lg hover:bg-emerald-100 transition">2. نماذج التدريب</a>
                 <a href="#domain3" class="text-amber-700 bg-amber-50 px-4 py-2 rounded-lg hover:bg-amber-100 transition">3. القيم والأخلاقيات</a>
                 <a href="#domain4" class="text-rose-700 bg-rose-50 px-4 py-2 rounded-lg hover:bg-rose-100 transition">4. مهارات المستقبل</a>
             </div>
@@ -130,7 +136,7 @@
         
         <!-- Header -->
         <header class="text-center mb-20 relative">
-            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">الإصدار الشامل (Comprehensive Edition)</div>
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-slate-100 text-slate-600 text-sm font-semibold">الإصدار الماسي (Diamond Edition)</div>
             <h1 class="text-4xl md:text-7xl font-black text-slate-900 mb-6 tracking-tight leading-tight">دليل المدرب المحترف</h1>
             <p class="text-xl md:text-2xl text-slate-600 mb-10 font-medium max-w-4xl mx-auto leading-relaxed">المرجع الكامل للنظريات، النماذج، الأدوات، واستراتيجيات التدريب الحديثة وفق المعايير الدولية.</p>
             
@@ -157,114 +163,79 @@
                 <div class="w-16 h-16 rounded-2xl bg-blue-600 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-blue-200">1</div>
                 <div>
                     <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-blue-600">المعرفة المهنية والنظريات</h2>
-                    <p class="text-lg text-slate-500">الأسس العلمية التي يبني عليها المدرب ممارساته.</p>
+                    <p class="text-lg text-slate-500">الأسس العلمية والنظريات الست الكبرى التي يبني عليها المدرب ممارساته.</p>
                 </div>
             </div>
 
-            <!-- 1.1 Learning Theories Comparison -->
+            <!-- 1.1 Learning Theories Comparison (EXPANDED TO 6) -->
             <div class="mb-16">
                 <span class="chapter-badge">الفصل الأول</span>
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">مدارس ونظريات التعلم (Learning Theories)</h3>
-                <p class="text-slate-600 mb-6 max-w-4xl">فهم كيفية حدوث التعلم هو الخطوة الأولى للمدرب. إليك مقارنة جوهرية بين المدارس الثلاث الكبرى وتطبيقاتها في التدريب:</p>
+                <h3 class="text-2xl font-bold text-slate-800 mb-6">مدارس ونظريات التعلم (The Six Major Schools)</h3>
+                <p class="text-slate-600 mb-8 max-w-4xl">إلمام المدرب بهذه المدارس يمنحه المرونة في اختيار الأسلوب المناسب لكل موقف تدريبي.</p>
                 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Behaviorism -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- 1. Behaviorism -->
                     <div class="bg-white p-6 rounded-2xl border-t-8 border-blue-500 shadow-md domain-card">
-                        <h4 class="text-xl font-bold text-blue-800 mb-3">1. المدرسة السلوكية (Behaviorism)</h4>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: بافلوف، سكينر، ثورندايك</p>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li><strong>الفكرة:</strong> التعلم هو تغير في السلوك الظاهر نتيجة مثير واستجابة وتعزيز.</li>
-                            <li><strong>دور المدرب:</strong> مصمم للبيئة، ملقن، ومقوم للسلوك.</li>
-                            <li class="bg-blue-50 p-3 rounded-lg border border-blue-100">
-                                <strong>تطبيق تدريبي:</strong> التكرار والممارسة، التغذية الراجعة الفورية، المكافآت والشهادات عند الإنجاز.
-                            </li>
-                        </ul>
+                        <h4 class="text-xl font-bold text-blue-800 mb-2">1. المدرسة السلوكية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">بافلوف، سكينر</p>
+                        <p class="text-sm text-slate-700 mb-3">التعلم هو تغير في السلوك نتيجة (مثير + استجابة + تعزيز).</p>
+                        <div class="bg-blue-50 p-2 rounded text-xs border border-blue-100"><strong>تطبيق:</strong> التكرار، المكافآت، التدريب على المهارات اليدوية.</div>
                     </div>
-                    <!-- Cognitivism -->
+
+                    <!-- 2. Cognitivism -->
                     <div class="bg-white p-6 rounded-2xl border-t-8 border-indigo-500 shadow-md domain-card">
-                        <h4 class="text-xl font-bold text-indigo-800 mb-3">2. المدرسة المعرفية (Cognitivism)</h4>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: بياجيه، جانييه</p>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li><strong>الفكرة:</strong> التركيز على العمليات العقلية الداخلية (كيف يعالج الدماغ المعلومة ويخزنها).</li>
-                            <li><strong>دور المدرب:</strong> منظم للمحتوى، مسهل لعملية الفهم.</li>
-                            <li class="bg-indigo-50 p-3 rounded-lg border border-indigo-100">
-                                <strong>تطبيق تدريبي:</strong> الخرائط الذهنية، التسلسل المنطقي للمحتوى، ربط المعلومات الجديدة بالسابقة.
-                            </li>
-                        </ul>
+                        <h4 class="text-xl font-bold text-indigo-800 mb-2">2. المدرسة المعرفية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">بياجيه، جانييه</p>
+                        <p class="text-sm text-slate-700 mb-3">التركيز على العمليات العقلية (معالجة المعلومات، الذاكرة، التفكير).</p>
+                        <div class="bg-indigo-50 p-2 rounded text-xs border border-indigo-100"><strong>تطبيق:</strong> الخرائط الذهنية، التسلسل المنطقي، تنظيم المحتوى.</div>
                     </div>
-                    <!-- Constructivism -->
+
+                    <!-- 3. Constructivism -->
                     <div class="bg-white p-6 rounded-2xl border-t-8 border-cyan-500 shadow-md domain-card">
-                        <h4 class="text-xl font-bold text-cyan-800 mb-3">3. المدرسة البنائية (Constructivism)</h4>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">الرواد: فيغوتسكي، ديوي</p>
-                        <ul class="space-y-3 text-sm text-slate-700">
-                            <li><strong>الفكرة:</strong> المتعلم يبني معرفته بنفسه من خلال الخبرة والتفاعل الاجتماعي.</li>
-                            <li><strong>دور المدرب:</strong> مرشد، ميسر (Facilitator)، وموجه.</li>
-                            <li class="bg-cyan-50 p-3 rounded-lg border border-cyan-100">
-                                <strong>تطبيق تدريبي:</strong> التعلم القائم على المشاريع، النقاشات الجماعية، حل المشكلات المعقدة.
-                            </li>
-                        </ul>
+                        <h4 class="text-xl font-bold text-cyan-800 mb-2">3. المدرسة البنائية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">فيغوتسكي، ديوي</p>
+                        <p class="text-sm text-slate-700 mb-3">المتعلم يبني معرفته بنفسه بناءً على خبراته السابقة.</p>
+                        <div class="bg-cyan-50 p-2 rounded text-xs border border-cyan-100"><strong>تطبيق:</strong> التعلم القائم على المشاريع، حل المشكلات.</div>
+                    </div>
+
+                    <!-- 4. Social Learning (NEW) -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-teal-500 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-teal-800 mb-2">4. المدرسة الاجتماعية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">ألبيرت باندورا</p>
+                        <p class="text-sm text-slate-700 mb-3">التعلم يحدث عبر الملاحظة والنمذجة (القدوة) في سياق اجتماعي.</p>
+                        <div class="bg-teal-50 p-2 rounded text-xs border border-teal-100"><strong>تطبيق:</strong> البيان العملي (Demo)، الملازمة (Shadowing).</div>
+                    </div>
+
+                    <!-- 5. Humanistic (NEW) -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-rose-400 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-rose-800 mb-2">5. المدرسة الإنسانية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">ماسلو، روجرز</p>
+                        <p class="text-sm text-slate-700 mb-3">التركيز على تحقيق الذات، والمشاعر، والبيئة الآمنة للتعلم.</p>
+                        <div class="bg-rose-50 p-2 rounded text-xs border border-rose-100"><strong>تطبيق:</strong> التعلم المتمحور حول المتدرب، التحفيز الذاتي.</div>
+                    </div>
+
+                    <!-- 6. Connectivism (NEW) -->
+                    <div class="bg-white p-6 rounded-2xl border-t-8 border-slate-600 shadow-md domain-card">
+                        <h4 class="text-xl font-bold text-slate-800 mb-2">6. المدرسة الاتصالية</h4>
+                        <p class="text-xs text-gray-500 mb-3 font-semibold">جورج سيمنز</p>
+                        <p class="text-sm text-slate-700 mb-3">التعلم هو عملية ربط بين مصادر المعلومات (العقد) في العصر الرقمي.</p>
+                        <div class="bg-slate-100 p-2 rounded text-xs border border-slate-200"><strong>تطبيق:</strong> التعلم الرقمي، الشبكات المهنية، البحث عبر الإنترنت.</div>
                     </div>
                 </div>
             </div>
 
-            <!-- 1.2 Edgar Dale's Cone -->
-            <div class="mb-16">
-                <span class="chapter-badge">الفصل الثاني</span>
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">مخروط الخبرة لإدجار ديل (Cone of Experience)</h3>
-                <p class="text-slate-600 mb-6">نموذج يوضح العلاقة بين نوع النشاط التعليمي ومقدار ما يتذكره المتعلم (نسب الاستبقاء).</p>
-                
-                <div class="flex flex-col md:flex-row gap-8 items-center">
-                    <!-- The Cone Visual -->
-                    <div class="w-full md:w-1/2 flex flex-col items-center">
-                        <div class="w-full max-w-md space-y-1 text-center text-white text-xs md:text-sm font-bold">
-                            <!-- Passive Learning -->
-                            <div class="cone-layer bg-slate-300 py-2 w-[20%] mx-auto rounded-t-lg text-slate-700">القراءة (10%)</div>
-                            <div class="cone-layer bg-slate-400 py-2 w-[35%] mx-auto text-slate-800">السماع (20%)</div>
-                            <div class="cone-layer bg-slate-500 py-2 w-[50%] mx-auto">مشاهدة الصور (30%)</div>
-                            <div class="cone-layer bg-slate-600 py-2 w-[65%] mx-auto">مشاهدة فيديو/عرض (50%)</div>
-                            <!-- Active Learning -->
-                            <div class="cone-layer bg-blue-500 py-3 w-[80%] mx-auto shadow-lg relative z-10 scale-105">المشاركة في نقاش (70%)</div>
-                            <div class="cone-layer bg-blue-700 py-4 w-[95%] mx-auto shadow-lg relative z-10 scale-105">ممارسة العمل / المحاكاة (90%)</div>
-                        </div>
-                        <p class="text-center text-sm text-gray-500 mt-4 font-semibold">كلما اتجهنا لقاعدة الهرم، زاد التفاعل وثبات المعلومة</p>
-                    </div>
-
-                    <!-- Explanation -->
-                    <div class="w-full md:w-1/2 bg-blue-50 p-8 rounded-2xl border border-blue-100">
-                        <h4 class="font-bold text-blue-900 mb-4 text-lg">دلالات للمدرب المحترف:</h4>
-                        <ul class="list-disc list-inside space-y-3 text-slate-700">
-                            <li>الاعتماد على <strong>المحاضرة فقط</strong> يؤدي لنسيان 90% من المحتوى.</li>
-                            <li>يجب دمج الوسائل البصرية والسمعية لرفع النسبة إلى 50%.</li>
-                            <li>للوصول إلى <strong>الإتقان</strong>، يجب إشراك المتدرب في (النقاش، التصميم، التقديم، الممارسة).</li>
-                            <li><strong>القاعدة الذهبية:</strong> "ما أسمعه أنساه، ما أراه أتذكره، ما أفعله أفهمه".</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 1.3 ADDIE & TNA -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">نموذج ADDIE للتصميم</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="info-pill bg-blue-100 text-blue-700">A: التحليل</span>
-                        <span class="info-pill bg-indigo-100 text-indigo-700">D: التصميم</span>
-                        <span class="info-pill bg-purple-100 text-purple-700">D: التطوير</span>
-                        <span class="info-pill bg-pink-100 text-pink-700">I: التنفيذ</span>
-                        <span class="info-pill bg-rose-100 text-rose-700">E: التقييم</span>
-                    </div>
-                    <p class="mt-4 text-sm text-gray-600">الإطار العام لأي عملية تدريبية ناجحة، يبدأ بتحليل الاحتياجات وينتهي بقياس الأثر.</p>
-                </div>
-                
-                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
-                    <h3 class="text-xl font-bold text-slate-800 mb-4">أنماط المتدربين (VARK)</h3>
-                    <p class="text-sm text-gray-600 mb-4">يجب تنويع الأساليب لتناسب الجميع:</p>
-                    <div class="grid grid-cols-2 gap-2 text-sm font-semibold text-center">
-                        <div class="bg-gray-50 p-2 rounded text-gray-700">👁️ بصري</div>
-                        <div class="bg-gray-50 p-2 rounded text-gray-700">👂 سمعي</div>
-                        <div class="bg-gray-50 p-2 rounded text-gray-700">📖 قرائي</div>
-                        <div class="bg-gray-50 p-2 rounded text-gray-700">✋ حركي</div>
-                    </div>
+            <!-- 1.3 ADDIE & TNA (Moved concepts here briefly) -->
+            <div class="bg-blue-50/50 p-6 rounded-2xl border border-blue-100">
+                <h3 class="text-xl font-bold text-blue-900 mb-4">💡 مفاهيم جوهرية في المعرفة</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                     <div>
+                        <h4 class="font-bold text-blue-800 text-sm mb-2">تحليل الاحتياجات (TNA)</h4>
+                        <p class="text-xs text-slate-600">تحديد الفجوة بين الأداء الحالي والمأمول (تحليل مؤسسي، وظيفي، فردي).</p>
+                     </div>
+                     <div>
+                        <h4 class="font-bold text-blue-800 text-sm mb-2">هرم بلوم (Bloom's Taxonomy)</h4>
+                        <p class="text-xs text-slate-600">تدرج الأهداف: تذكر ⬅ فهم ⬅ تطبيق ⬅ تحليل ⬅ تقويم ⬅ ابتكار.</p>
+                     </div>
                 </div>
             </div>
         </section>
@@ -276,189 +247,167 @@
             <div class="flex items-center gap-6 mb-10">
                 <div class="w-16 h-16 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-3xl font-bold shadow-lg shadow-emerald-200">2</div>
                 <div>
-                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-emerald-600">الممارسة المهنية والأساليب</h2>
-                    <p class="text-lg text-slate-500">كيف نحول النظريات إلى واقع ملموس داخل القاعة.</p>
+                    <h2 class="text-4xl font-extrabold text-slate-800 section-header after:bg-emerald-600">الممارسة المهنية للمدرب</h2>
+                    <p class="text-lg text-slate-500">التطبيق العملي للنظريات والنماذج العلمية في بيئة التدريب.</p>
                 </div>
             </div>
 
-            <!-- 2.1 Kolb's Learning Cycle -->
-            <div class="mb-16">
-                <span class="chapter-badge">الفصل الثالث</span>
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">دورة كولب للتعلم التجريبي (Kolb's Experiential Learning)</h3>
-                <p class="text-slate-600 mb-8 max-w-4xl">يعتبر نموذج كولب من أهم النماذج لتصميم الأنشطة التدريبية. يرى كولب أن التعلم عملية دائرية من 4 مراحل، وينتج عنها 4 أنماط للمتعلمين.</p>
+            <!-- CHAPTER 2: MODELS & METHODS (Renamed & Expanded) -->
+            <div class="mb-20">
+                <span class="chapter-badge bg-emerald-700">الفصل الثاني</span>
+                <h3 class="text-3xl font-bold text-slate-800 mb-8">نماذج وأساليب وطرق التدريب</h3>
+                
+                <!-- 2.1 Brain Theories -->
+                <div class="mb-12">
+                    <h4 class="text-2xl font-bold text-emerald-800 mb-6 flex items-center gap-2"><span class="text-3xl">🧠</span> نظريات الدماغ والتعلم</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Triune Brain -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100">
+                            <h5 class="text-lg font-bold text-slate-800 mb-4">1. نموذج الدماغ الثالوثي (Paul MacLean)</h5>
+                            <div class="space-y-3">
+                                <div class="brain-part bg-red-50 p-3 rounded-lg border-l-4 border-red-500">
+                                    <span class="font-bold text-red-800 block">الدماغ الزاحف (Reptilian):</span>
+                                    <span class="text-xs text-slate-600">مسؤول عن الغرائز والبقاء والأمان. (يجب أن يشعر المتدرب بالأمان أولاً).</span>
+                                </div>
+                                <div class="brain-part bg-yellow-50 p-3 rounded-lg border-l-4 border-yellow-500">
+                                    <span class="font-bold text-yellow-800 block">الدماغ الحوفي (Limbic):</span>
+                                    <span class="text-xs text-slate-600">مسؤول عن المشاعر والعواطف. (ربط التعلم بمشاعر إيجابية).</span>
+                                </div>
+                                <div class="brain-part bg-blue-50 p-3 rounded-lg border-l-4 border-blue-500">
+                                    <span class="font-bold text-blue-800 block">القشرة المخية (Neocortex):</span>
+                                    <span class="text-xs text-slate-600">مسؤول عن التفكير المنطقي والتحليل واللغة. (محتوى التدريب).</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Split Brain -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-emerald-100">
+                            <h5 class="text-lg font-bold text-slate-800 mb-4">2. فصي الدماغ (Roger Sperry)</h5>
+                            <div class="flex gap-4 h-full">
+                                <div class="flex-1 bg-gray-100 rounded-l-2xl p-4 text-center flex flex-col justify-center">
+                                    <span class="text-2xl mb-2">🧮</span>
+                                    <strong class="block text-slate-800 mb-1">الفص الأيسر</strong>
+                                    <span class="text-xs text-slate-500">منطق، أرقام، لغة، تحليل، ترتيب.</span>
+                                </div>
+                                <div class="flex-1 bg-emerald-100 rounded-r-2xl p-4 text-center flex flex-col justify-center">
+                                    <span class="text-2xl mb-2">🎨</span>
+                                    <strong class="block text-emerald-900 mb-1">الفص الأيمن</strong>
+                                    <span class="text-xs text-emerald-700">خيال، صور، ألوان، مشاعر، إبداع.</span>
+                                </div>
+                            </div>
+                            <p class="text-xs text-center mt-3 text-gray-500">المدرب المحترف يدمج بين الفصين (صور + معلومات).</p>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-                    <!-- The 4 Stages -->
-                    <div class="bg-emerald-50 p-8 rounded-3xl relative overflow-hidden">
-                        <div class="absolute top-0 left-0 w-full h-2 bg-emerald-500"></div>
-                        <h4 class="font-bold text-emerald-900 text-xl mb-6 text-center">🔄 مراحل دورة التعلم الأربعة</h4>
+                <!-- 2.2 Learning Styles Models -->
+                <div class="mb-12">
+                    <h4 class="text-2xl font-bold text-emerald-800 mb-6 flex items-center gap-2"><span class="text-3xl">🔄</span> نماذج أنماط التعلم</h4>
+                    
+                    <!-- Kolb & McCarthy -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                        <!-- Kolb -->
+                        <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-200">
+                            <h5 class="font-bold text-emerald-900 mb-3">1. نموذج كولب (Kolb)</h5>
+                            <p class="text-xs text-emerald-800 mb-3">دورة تعلم رباعية المراحل:</p>
+                            <div class="grid grid-cols-2 gap-2 text-xs">
+                                <div class="bg-white p-2 rounded shadow-sm">1. خبرة مادية (شعور)</div>
+                                <div class="bg-white p-2 rounded shadow-sm">2. ملاحظة تأملية (مشاهدة)</div>
+                                <div class="bg-white p-2 rounded shadow-sm">3. مفاهيم مجردة (تفكير)</div>
+                                <div class="bg-white p-2 rounded shadow-sm">4. تجريب نشط (عمل)</div>
+                            </div>
+                        </div>
                         
-                        <div class="relative space-y-6">
-                            <!-- Stage 1 -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">1</div>
-                                <div>
-                                    <h5 class="font-bold text-emerald-900">الخبرة المادية (Concrete Experience)</h5>
-                                    <p class="text-sm text-emerald-800/80">"الشعور". انخراط المتدرب في تجربة أو نشاط عملي محدد.</p>
-                                </div>
-                            </div>
-                            <!-- Stage 2 -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">2</div>
-                                <div>
-                                    <h5 class="font-bold text-emerald-900">الملاحظة التأملية (Reflective Observation)</h5>
-                                    <p class="text-sm text-emerald-800/80">"المشاهدة". التفكير فيما حدث، ومراجعة التجربة من عدة زوايا.</p>
-                                </div>
-                            </div>
-                            <!-- Stage 3 -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">3</div>
-                                <div>
-                                    <h5 class="font-bold text-emerald-900">المفاهيم المجردة (Abstract Conceptualization)</h5>
-                                    <p class="text-sm text-emerald-800/80">"التفكير". الخروج باستنتاجات، قواعد، أو نظريات من التجربة.</p>
-                                </div>
-                            </div>
-                            <!-- Stage 4 -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-emerald-200 text-emerald-800 flex-shrink-0 flex items-center justify-center font-bold">4</div>
-                                <div>
-                                    <h5 class="font-bold text-emerald-900">التجريب النشط (Active Experimentation)</h5>
-                                    <p class="text-sm text-emerald-800/80">"العمل". تطبيق ما تعلمه في مواقف جديدة للتأكد من صحته.</p>
-                                </div>
-                            </div>
+                        <!-- McCarthy (4MAT) -->
+                        <div class="bg-amber-50 p-6 rounded-2xl border border-amber-200">
+                            <h5 class="font-bold text-amber-900 mb-3">2. نموذج مكارثي (4MAT)</h5>
+                            <p class="text-xs text-amber-800 mb-3">دمجت كولب مع فصي الدماغ في 4 أسئلة:</p>
+                            <ul class="space-y-2 text-xs font-bold text-amber-900">
+                                <li class="flex items-center gap-2"><span class="bg-amber-200 px-2 rounded">لماذا؟</span> (للمتعلم المتخيل - إيجاد المعنى).</li>
+                                <li class="flex items-center gap-2"><span class="bg-amber-200 px-2 rounded">ماذا؟</span> (للمتعلم التحليلي - الحقائق).</li>
+                                <li class="flex items-center gap-2"><span class="bg-amber-200 px-2 rounded">كيف؟</span> (للمتعلم المنطقي - التجريب).</li>
+                                <li class="flex items-center gap-2"><span class="bg-amber-200 px-2 rounded">ماذا لو؟</span> (للمتعلم الديناميكي - الاكتشاف).</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- The 4 Styles -->
-                    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
-                        <h4 class="font-bold text-slate-800 text-xl mb-6 text-center">🧠 أنماط المتعلمين وفق كولب</h4>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="p-4 bg-yellow-50 rounded-xl border border-yellow-100">
-                                <span class="block text-yellow-800 font-bold mb-1">التباعدي (Diverger)</span>
-                                <span class="text-xs text-gray-600">خيالي، يفضل العصف الذهني (شعور + مشاهدة).</span>
+                    <!-- VARK -->
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <h5 class="font-bold text-slate-800 mb-3">3. نموذج فارك (VARK)</h5>
+                        <div class="flex justify-between items-center text-center gap-2 text-xs md:text-sm">
+                            <div class="flex-1 p-3 bg-red-50 rounded-xl"><span class="block text-xl">👀</span> Visual (بصري)</div>
+                            <div class="flex-1 p-3 bg-yellow-50 rounded-xl"><span class="block text-xl">👂</span> Aural (سمعي)</div>
+                            <div class="flex-1 p-3 bg-blue-50 rounded-xl"><span class="block text-xl">📖</span> Read/Write (قرائي)</div>
+                            <div class="flex-1 p-3 bg-green-50 rounded-xl"><span class="block text-xl">✋</span> Kinesthetic (حركي)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2.3 Instructional Design Models -->
+                <div class="mb-12">
+                    <h4 class="text-2xl font-bold text-emerald-800 mb-6 flex items-center gap-2"><span class="text-3xl">📐</span> نماذج التصميم التعليمي</h4>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- ADDIE -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-blue-600">
+                            <h5 class="font-bold text-slate-800 mb-3">1. نموذج ADDIE</h5>
+                            <p class="text-sm text-slate-600 mb-4">النموذج العام والأساسي لتصميم النظم التعليمية:</p>
+                            <div class="flex flex-wrap gap-2 text-xs font-bold text-white">
+                                <span class="bg-blue-600 px-3 py-1 rounded-full">Analysis (تحليل)</span>
+                                <span class="bg-blue-600 px-3 py-1 rounded-full">Design (تصميم)</span>
+                                <span class="bg-blue-600 px-3 py-1 rounded-full">Development (تطوير)</span>
+                                <span class="bg-blue-600 px-3 py-1 rounded-full">Implementation (تنفيذ)</span>
+                                <span class="bg-blue-600 px-3 py-1 rounded-full">Evaluation (تقويم)</span>
                             </div>
-                            <div class="p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                <span class="block text-blue-800 font-bold mb-1">الاستيعابي (Assimilator)</span>
-                                <span class="text-xs text-gray-600">منطقي، يفضل النظريات (تفكير + مشاهدة).</span>
-                            </div>
-                            <div class="p-4 bg-green-50 rounded-xl border border-green-100">
-                                <span class="block text-green-800 font-bold mb-1">التقاربي (Converger)</span>
-                                <span class="text-xs text-gray-600">عملي، يفضل حل المشكلات (تفكير + عمل).</span>
-                            </div>
-                            <div class="p-4 bg-red-50 rounded-xl border border-red-100">
-                                <span class="block text-red-800 font-bold mb-1">التكيفي (Accommodator)</span>
-                                <span class="text-xs text-gray-600">مغامر، يفضل التجربة والخطأ (شعور + عمل).</span>
-                            </div>
+                        </div>
+
+                        <!-- Kemp Model -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border-t-4 border-purple-600">
+                            <h5 class="font-bold text-slate-800 mb-3">2. نموذج كيمب (The Kemp Model)</h5>
+                            <p class="text-sm text-slate-600 mb-2">يتميز بالمرونة والشكل الدائري، ويتكون من 9 خطوات:</p>
+                            <ul class="grid grid-cols-2 gap-1 text-xs text-slate-700 list-disc list-inside">
+                                <li>تحديد المشاكل التعليمية</li>
+                                <li>خصائص المتعلمين</li>
+                                <li>تحليل المهام</li>
+                                <li>الأهداف التعليمية</li>
+                                <li>تسلسل المحتوى</li>
+                                <li>استراتيجيات التدريس</li>
+                                <li>تسليم التدريب</li>
+                                <li>أدوات التقويم</li>
+                                <li>الموارد والدعم</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2.4 Edgar Dale Cone -->
+                <div class="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl border border-slate-200">
+                    <h4 class="text-2xl font-bold text-slate-800 mb-6 text-center">🔻 مخروط الخبرة (Edgar Dale) ودلالاته</h4>
+                    <div class="flex flex-col md:flex-row gap-8 items-center justify-center">
+                         <div class="w-full max-w-sm space-y-1 text-center text-white text-xs font-bold">
+                            <div class="bg-slate-300 py-1 w-[30%] mx-auto rounded-t text-slate-800">قراءة (10%)</div>
+                            <div class="bg-slate-400 py-1 w-[45%] mx-auto text-slate-800">سماع (20%)</div>
+                            <div class="bg-slate-500 py-1 w-[60%] mx-auto">مشاهدة (30%)</div>
+                            <div class="bg-blue-600 py-2 w-[80%] mx-auto shadow-md transform scale-105 z-10">نقاش وحوار (70%)</div>
+                            <div class="bg-emerald-600 py-3 w-[100%] mx-auto shadow-md transform scale-105 z-10">ممارسة ومحاكاة (90%)</div>
+                        </div>
+                        <div class="flex-1 text-sm text-slate-700">
+                            <strong class="block text-emerald-800 mb-2">دلالات للمدرب:</strong>
+                            <ul class="list-disc list-inside space-y-2">
+                                <li>المحاضرة وحدها غير كافية لرسوخ المعلومة.</li>
+                                <li>يجب الانتقال من "التعلم السلبي" إلى "التعلم النشط".</li>
+                                <li>أفضل طريقة للتعلم هي "الممارسة" أو "تعليم الآخرين".</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 2.2 Training Types Table -->
-            <div class="mb-16">
-                <span class="chapter-badge">الفصل الرابع</span>
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">أنواع التدريب وتصنيفاته (Types of Training)</h3>
-                <div class="overflow-x-auto">
-                    <table class="custom-table min-w-[800px]">
-                        <thead>
-                            <tr>
-                                <th>معيار التصنيف</th>
-                                <th>النوع الأول</th>
-                                <th>النوع الثاني</th>
-                                <th>ملاحظات للمدرب</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>حسب المكان</strong></td>
-                                <td>
-                                    <div class="font-bold text-emerald-700">داخل العمل (On-the-Job)</div>
-                                    <span class="text-xs">في بيئة العمل الحقيقية، تكلفة أقل، واقعية عالية.</span>
-                                </td>
-                                <td>
-                                    <div class="font-bold text-emerald-700">خارج العمل (Off-the-Job)</div>
-                                    <span class="text-xs">في قاعات، فنادق، تركيز أعلى، تكلفة أعلى.</span>
-                                </td>
-                                <td>يفضل OJT للمهارات التقنية، و Off-the-Job للمفاهيم والسلوكيات.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>حسب التوقيت</strong></td>
-                                <td>
-                                    <div class="font-bold text-blue-700">متزامن (Synchronous)</div>
-                                    <span class="text-xs">بث مباشر، تفاعل فوري، قاعة افتراضية أو واقعية.</span>
-                                </td>
-                                <td>
-                                    <div class="font-bold text-blue-700">غير متزامن (Asynchronous)</div>
-                                    <span class="text-xs">مسجل، ذاتي، منصات مثل Udemy.</span>
-                                </td>
-                                <td>المزيج (Blended) هو الأفضل حالياً.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>حسب الهدف</strong></td>
-                                <td>
-                                    <div class="font-bold text-purple-700">تدريب توجيهي (Induction)</div>
-                                    <span class="text-xs">للموظفين الجدد، للتعريف بالثقافة والأنظمة.</span>
-                                </td>
-                                <td>
-                                    <div class="font-bold text-purple-700">تدريب علاجي/تطويري</div>
-                                    <span class="text-xs">لسد فجوة أداء حالية أو الاستعداد لترقية.</span>
-                                </td>
-                                <td>يجب تحديد الهدف بدقة في TNA.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 2.3 Trainer's Design Toolkit -->
-            <div class="mb-16">
-                <span class="chapter-badge">الفصل الخامس</span>
-                <h3 class="text-2xl font-bold text-slate-800 mb-6">حقيبة أدوات المدرب للتصميم (Trainer's Design Toolkit)</h3>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <!-- Presentation -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-orange-400 transition cursor-default">
-                        <div class="text-orange-500 text-3xl mb-3">🖥️</div>
-                        <h5 class="font-bold text-slate-800 mb-2">العرض والتقديم</h5>
-                        <ul class="text-sm text-slate-500 space-y-1">
-                            <li>• PowerPoint</li>
-                            <li>• Canva (تصميم بصري)</li>
-                            <li>• Prezi (تكبير وتصغير)</li>
-                            <li>• Gamma (عرض بالذكاء الاصطناعي)</li>
-                        </ul>
-                    </div>
-                    <!-- Interaction -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-blue-400 transition cursor-default">
-                        <div class="text-blue-500 text-3xl mb-3">🎮</div>
-                        <h5 class="font-bold text-slate-800 mb-2">التفاعل واللعب</h5>
-                        <ul class="text-sm text-slate-500 space-y-1">
-                            <li>• Kahoot! (مسابقات)</li>
-                            <li>• Mentimeter (تصويت حي)</li>
-                            <li>• Padlet (حائط أفكار)</li>
-                            <li>• Wheel of Names (قرعة)</li>
-                        </ul>
-                    </div>
-                    <!-- Management -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-green-400 transition cursor-default">
-                        <div class="text-green-500 text-3xl mb-3">📋</div>
-                        <h5 class="font-bold text-slate-800 mb-2">الإدارة والتخطيط</h5>
-                        <ul class="text-sm text-slate-500 space-y-1">
-                            <li>• Trello (تنظيم المهام)</li>
-                            <li>• Google Forms (استبيانات)</li>
-                            <li>• Zoom/Teams (قاعات)</li>
-                            <li>• Notion (بنك المعرفة)</li>
-                        </ul>
-                    </div>
-                    <!-- AI Helpers -->
-                    <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm hover:border-purple-400 transition cursor-default">
-                        <div class="text-purple-500 text-3xl mb-3">🤖</div>
-                        <h5 class="font-bold text-slate-800 mb-2">مساعدو الـ AI</h5>
-                        <ul class="text-sm text-slate-500 space-y-1">
-                            <li>• ChatGPT (سيناريوهات)</li>
-                            <li>• Gemini (بحث وتحليل)</li>
-                            <li>• Synthesia (أفاتار فيديو)</li>
-                            <li>• ElevenLabs (صوتيات)</li>
-                        </ul>
-                    </div>
+            <!-- 2.2 Training Types & Toolkit (Kept as supplementary chapters) -->
+            <div class="mb-10 p-6 bg-slate-50 rounded-2xl border border-slate-200">
+                <h4 class="font-bold text-slate-700 mb-4">أقسام إضافية في الممارسة:</h4>
+                <div class="flex gap-4">
+                    <span class="bg-white px-4 py-2 rounded shadow-sm text-sm">🗂️ أنواع التدريب (متزامن/غير متزامن)</span>
+                    <span class="bg-white px-4 py-2 rounded shadow-sm text-sm">🛠️ حقيبة أدوات المدرب التقنية</span>
                 </div>
             </div>
         </section>
@@ -705,7 +654,7 @@
             <h2 class="text-2xl font-bold text-slate-800 mb-2">دليل المدرب المحترف</h2>
             <p class="text-slate-500 font-medium mb-6">المرجع الشامل للتطوير والتميز في عالم التدريب</p>
             <div class="flex justify-center gap-4 mb-8">
-                <span class="bg-slate-100 px-3 py-1 rounded text-xs text-slate-600">الإصدار 4.0</span>
+                <span class="bg-slate-100 px-3 py-1 rounded text-xs text-slate-600">الإصدار 5.0</span>
                 <span class="bg-slate-100 px-3 py-1 rounded text-xs text-slate-600">متوافق مع معايير ETEC</span>
             </div>
             <p class="text-slate-400 text-sm dir-ltr">Designed for © Mohammed Al-Asiri 2025</p>
